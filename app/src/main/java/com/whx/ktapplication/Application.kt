@@ -1,7 +1,7 @@
 package com.whx.ktapplication
 
 import android.app.Application
-import kotlin.properties.Delegates
+import com.whx.ktapplication.delegate.DelegatesExt
 
 /**
  * Created by whx on 2017/8/2.

@@ -3,9 +3,9 @@ package com.whx.ktapplication
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
 import com.whx.ktapplication.domain.Forecast
 import com.whx.ktapplication.domain.RequestForecastCommand
+import com.whx.ktapplication.utils.toast
 import org.jetbrains.anko.async
 import org.jetbrains.anko.uiThread
 import kotlinx.android.synthetic.main.activity_main.*

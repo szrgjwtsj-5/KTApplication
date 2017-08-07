@@ -1,4 +1,4 @@
-package com.whx.ktapplication
+package com.whx.ktapplication.utils
 
 import android.content.Context
 import android.view.View

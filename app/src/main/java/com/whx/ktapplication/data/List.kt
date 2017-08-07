@@ -143,4 +143,31 @@ fun testOperate() {
     println(list.singleOrNull { it % 5 == 0})
 }
 
-fun test
+fun testProduce() {
+    val list1 = listOf(1, 2, 3, 4, 5, 6)
+    val list2 = listOf(2, 2, 3, 4, 5, 5, 6)
+    //把两个集合合并成一个新的，相同index的元素根据给定函数进行合并成新元素，返回新集合，新集合的
+    //大小由元素数少的集合决定
+    println(list1.zip(list2) {it1, it2 -> it1 + it2})
+    //把一个给定的集合分割成两个，第一个集合由给定集合的每一个元素匹配给定函数返回true的元素
+    //组成，第二个集合由返回false的元素组成
+    val pair = list.partition { it % 2 == 0 }
+    println(pair)
+    //plus 函数将两个集合组合成一个，等同于用 + 操作符，也可以添加一个单独的元素
+    list1.plus(list2)
+    list1.plus(7)
+    list1 + list2
+
+}
+
+fun testOrder() {
+    val list1 = listOf(3, 2, 5, 6, 1)
+    //反转列表
+    println(list.reversed())
+    //返回自然排序的list
+    println(list1.sorted())
+    //返回根据给定函数排序后的list
+    println(list1.sortedBy { -it })
+    //返回一个降序排序的list，同理sortedByDescending {}
+    println(list1.sortedDescending())
+}

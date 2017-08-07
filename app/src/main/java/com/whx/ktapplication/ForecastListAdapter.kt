@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import com.squareup.picasso.Picasso
 import com.whx.ktapplication.domain.Forecast
 import com.whx.ktapplication.domain.ForecastList
+import com.whx.ktapplication.utils.ctx
 import kotlinx.android.synthetic.main.forecast_item.view.*
 
 /**

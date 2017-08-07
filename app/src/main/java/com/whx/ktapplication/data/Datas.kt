@@ -1,22 +1,40 @@
 package com.whx.ktapplication.data
 
-import java.util.*
+import kotlin.collections.HashMap
 
 /**
  * Created by whx on 2017/8/1.
+ * 为数据库创建model类，
  */
-//data class Forecast(val date: Date, val temp: Float, val detail: String) {
-//    override fun equals(other: Any?): Boolean {
-//        if (this == other)
-//            return true
-//        if (other !is Forecast)
-//            return false
-//        return date.equals(other.date) and temp.equals(other.temp) and detail.equals(other.detail)
-//    }
-//
-//}
-//
-//fun test() {
-//    val ft: Forecast = Forecast(Date(), 1.2f, "123")
-//    val f2 = ft.copy()
-//}
+class CityForecast(val map: MutableMap<String, Any?>, val dailyForecast: List<DayForecast>) {
+    var _id: Long by map
+    var city: String by map
+    var country: String by map
+
+    constructor(id: Long, city: String, country: String,
+                dailyForecast: List<DayForecast>) : this(HashMap(), dailyForecast) {
+        this._id = id
+        this.city = city
+        this.country = country
+    }
+}
+
+class DayForecast(var map: MutableMap<String, Any?>) {
+    var _id: Long by map
+    var date: Long by map
+    var description: String by map
+    var high: Int by map
+    var low: Int by map
+    var iconUrl: String by map
+    var cityId: Long by map
+
+    constructor(date: Long, description: String, high: Int, low: Int,
+                iconUrl: String, cityId: Long) : this(HashMap()){
+        this.date = date
+        this.description = description
+        this.high = high
+        this.low = low
+        this.iconUrl = iconUrl
+        this.cityId = cityId
+    }
+}
