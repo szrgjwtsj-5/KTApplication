@@ -7,7 +7,22 @@ import android.database.sqlite.SQLiteDatabase;
  */
 
 public class JavaTest {
+    private int a = 1;
+
+    class Hhh {
+        private int b = 2;
+        private void func() {
+            System.out.println(a);
+        }
+    }
+    static class Lll {
+        private int c = 3;
+        private void func() {
+            System.out.println(new JavaTest().a);
+        }
+    }
     public void test() {
-        SQLiteDatabase db = SQLiteDatabase.openOrCreateDatabase("", null);
+        System.out.println(new Hhh().b);
+
     }
 }
