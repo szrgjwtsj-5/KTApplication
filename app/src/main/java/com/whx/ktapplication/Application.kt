@@ -4,7 +4,6 @@ import android.app.Application
 import android.content.Context
 import android.os.StrictMode
 import com.squareup.leakcanary.LeakCanary
-import com.squareup.leakcanary.RefWatcher
 import com.whx.ktapplication.delegate.DelegatesExt
 
 /**
@@ -24,15 +23,15 @@ class MyApplication : Application() {
         setupLeakCanary()
     }
 
-    fun setupLeakCanary() {
+    private fun setupLeakCanary() {
         if (LeakCanary.isInAnalyzerProcess(this)) {
             return
         }
-        enableStrictMode()
+        //enableStrictMode()
         LeakCanary.install(this)
     }
 
-    fun enableStrictMode() {
+    private fun enableStrictMode() {
         StrictMode.setThreadPolicy(StrictMode.ThreadPolicy.Builder()
                 .detectAll()
                 .penaltyLog()

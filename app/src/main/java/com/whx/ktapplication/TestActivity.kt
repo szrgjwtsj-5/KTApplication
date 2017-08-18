@@ -1,5 +1,6 @@
 package com.whx.ktapplication
 
+import android.content.Intent
 import android.os.*
 import android.support.v7.app.AppCompatActivity
 import com.whx.ktapplication.utils.toast
@@ -25,12 +26,7 @@ class TestActivity : AppCompatActivity() {
     }
 
     fun ruun() {
-        object: AsyncTask<Void, Void, Void>() {
-            override fun doInBackground(vararg params: Void?): Void? {
-                SystemClock.sleep(20000)
-                return null
-            }
-        }.execute()
+        startActivity(Intent(this, WebActivity::class.java))
     }
 
 }
