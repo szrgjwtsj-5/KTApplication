@@ -1,0 +1,32 @@
+<HTML>
+
+    <head>
+        <meta charset="utf-8"/>
+        <script type="text/javascript">
+            function showAlert() {
+                alert("hhhhhh")
+            }
+            function showConfirm() {
+                var r = confirm("press a button")
+                if (r == true){
+                    alert("ok")
+                } else {
+                    alert("cancel")
+                }
+            }
+            function showPrompt() {
+                var name = prompt("input your name", "wang")
+                if (name != null && name != "") {
+                    document.write("hello " + name + ", how are you")
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <p>hello world!</p>
+        <button onclick="showAlert()">点我alert</button>
+        <button onclick="showConfirm()">点我confirm</button>
+        <button onclick="showPrompt()">点我prompt</button>
+    </body>
+</HTML>
