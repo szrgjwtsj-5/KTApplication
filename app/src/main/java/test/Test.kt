@@ -15,10 +15,6 @@ class Test {
         const val compObjConstValue = "compObjConstValue"
         val compObjValue = "compObjValue"
     }
-    object obj: A() {
-        const val objConstValue = "objConstValue"
-        val objValue = "objValue"
-    }
 }
 fun main(args: Array<String>) {
 
