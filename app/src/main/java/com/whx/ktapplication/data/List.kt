@@ -1,5 +1,8 @@
 package com.whx.ktapplication.data
 
+import java.text.SimpleDateFormat
+import java.util.*
+
 /**
  * Created by whx on 2017/8/3.
  */
@@ -154,10 +157,12 @@ fun testProduce() {
     val pair = list.partition { it % 2 == 0 }
     println(pair)
     //plus 函数将两个集合组合成一个，等同于用 + 操作符，也可以添加一个单独的元素
-    list1.plus(list2)
+    val list_s = list1.plus(list2)
+
     list1.plus(7)
     list1 + list2
 
+    println(list_s)
 }
 
 fun testOrder() {
@@ -170,4 +175,16 @@ fun testOrder() {
     println(list1.sortedBy { -it })
     //返回一个降序排序的list，同理sortedByDescending {}
     println(list1.sortedDescending())
+}
+
+open class A {
+    fun hh(){
+
+    }
+
+}
+
+fun main(args: Array<String>) {
+
+
 }

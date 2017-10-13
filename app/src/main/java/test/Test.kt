@@ -1,14 +1,32 @@
 package test
 
+import com.whx.ktapplication.data.A
+import java.util.*
+
 /**
  * Created by whx on 2017/7/31.
  */
+const val topConstValue = "topConstValue"
+val topValue = "topValue"
+
 class Test {
-    var name = "zhangsan"
-        get() = field.toUpperCase()
-        set(value) {
-            field = "Name: $value"
-        }
-    var age = 250
-        get() = field + 2
+    // const val cc = "cc"
+    companion object {
+        const val compObjConstValue = "compObjConstValue"
+        val compObjValue = "compObjValue"
+    }
+    object obj: A() {
+        const val objConstValue = "objConstValue"
+        val objValue = "objValue"
+    }
+}
+fun main(args: Array<String>) {
+
+    val calendar = Calendar.getInstance()
+
+
+    println(calendar.get(Calendar.WEEK_OF_MONTH))
+    calendar.add(Calendar.WEEK_OF_YEAR, 7)
+    println(calendar.get(Calendar.WEEK_OF_MONTH))
+
 }

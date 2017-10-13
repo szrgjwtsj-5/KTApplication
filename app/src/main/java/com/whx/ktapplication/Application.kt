@@ -12,6 +12,8 @@ import com.whx.ktapplication.delegate.DelegatesExt
 class MyApplication : Application() {
     companion object {
         private var instance: Application by DelegatesExt.notNullStringValue()
+
+        @JvmStatic
         fun instance() = instance
 
     }

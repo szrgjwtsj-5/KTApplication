@@ -1,12 +1,11 @@
 package test;
 
-import android.graphics.Bitmap;
-import android.webkit.JsResult;
-import android.webkit.WebChromeClient;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
+import com.whx.ktapplication.MyApplication;
+import com.whx.ktapplication.data.ListKt;
 
 import org.jetbrains.annotations.Nullable;
+
+
 
 /**
  * Created by whx on 2017/8/18.
@@ -19,33 +18,20 @@ public class JavaTest {
         return "";
     }
 
-    class MyWebViewClient extends WebViewClient {
+    public void method() {
+        println(TestKt.topConstValue);
+        println(TestKt.getTopValue());
 
-        @Override
-        public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            return super.shouldOverrideUrlLoading(view, url);
-        }
+        println(Test.compObjConstValue);
+        println(Test.Companion.getCompObjValue());
 
-        @Override
-        public void onPageStarted(WebView view, String url, Bitmap favicon) {
-            super.onPageStarted(view, url, favicon);
-        }
+        println(Test.obj.objConstValue);
+        println(Test.obj.INSTANCE.getObjValue());
 
-        @Override
-        public void onPageFinished(WebView view, String url) {
-            super.onPageFinished(view, url);
-        }
+        MyApplication.instance();
+
     }
-
-    class MyWebChromeClient extends WebChromeClient {
-        @Override
-        public void onProgressChanged(WebView view, int newProgress) {
-            super.onProgressChanged(view, newProgress);
-        }
-
-        @Override
-        public boolean onJsAlert(WebView view, String url, String message, JsResult result) {
-            return super.onJsAlert(view, url, message, result);
-        }
+    private void println(Object o) {
+        System.out.println(o);
     }
 }
