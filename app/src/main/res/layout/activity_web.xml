@@ -4,10 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.whx.ktapplication.widget.SafeWebview
+    <com.whx.ktapplication.widget.SafeWebView
         android:id="@+id/mWebView"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    </com.whx.ktapplication.widget.SafeWebview>
+    </com.whx.ktapplication.widget.SafeWebView>
 </LinearLayout>

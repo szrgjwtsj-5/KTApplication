@@ -1,6 +1,12 @@
 package test
 
 import com.whx.ktapplication.data.A
+import com.whx.ktapplication.utils.full2Half
+import com.whx.ktapplication.utils.half2Full
+import java.math.BigDecimal
+import java.math.RoundingMode
+import java.text.DecimalFormat
+import java.text.NumberFormat
 import java.util.*
 
 /**
@@ -10,19 +16,44 @@ const val topConstValue = "topConstValue"
 val topValue = "topValue"
 
 class Test {
-    // const val cc = "cc"
-    companion object {
-        const val compObjConstValue = "compObjConstValue"
-        val compObjValue = "compObjValue"
+    var num = 0
+    var str = "test"
+
+    fun add() {
+        var lock = str.substring(1)
+
+        synchronized(str) {
+            num ++
+        }
     }
+
+    fun sub() {
+        var lock = str.substring(1)
+
+        synchronized(str) {
+            num --
+        }
+    }
+
 }
 fun main(args: Array<String>) {
 
-    val calendar = Calendar.getInstance()
+    var test = Test()
+
+    for (i in 0..9) {
+        object : Thread() {
+            override fun run() {
+                super.run()
+
+                test.add()
+                print(name + " add " + test.num + "       ")
+
+                test.sub()
+                println(name + " sub " + test.num)
 
 
-    println(calendar.get(Calendar.WEEK_OF_MONTH))
-    calendar.add(Calendar.WEEK_OF_YEAR, 7)
-    println(calendar.get(Calendar.WEEK_OF_MONTH))
-
+                //sleep(1000)
+            }
+        }.start()
+    }
 }

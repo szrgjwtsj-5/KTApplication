@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Star">
+        <attr name="starColor" format="color"/>
+        <attr name="rate" format="float"/>
+        <attr name="starRadius" format="dimension"/>
+    </declare-styleable>
+    <declare-styleable name="RatingStarView">
+        <attr name="starCount" format="integer"/>
+        <attr name="starMargin" format="dimension"/>
+        <attr name="starSize" format="dimension"/>
+        <attr name="starRate" format="float"/>
+        <attr name="starEmpty" format="reference"/>
+        <attr name="starFull" format="reference"/>
+    </declare-styleable>
+</resources>

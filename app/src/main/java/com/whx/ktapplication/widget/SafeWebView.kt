@@ -9,7 +9,7 @@ import android.webkit.WebView
 /**
  * Created by whx on 2017/8/18.
  */
-class SafeWebview(context: Context, attrs: AttributeSet?, def: Int) : WebView(context, attrs, def) {
+class SafeWebView(context: Context, attrs: AttributeSet?, def: Int) : WebView(context, attrs, def) {
 
     init {
         makeWebViewSafe()

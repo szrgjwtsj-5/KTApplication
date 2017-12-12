@@ -1,13 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/container"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <Button
         android:id="@+id/start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="start"/>
+        android:backgroundTint="#ffcdde"
+        android:foregroundTint="#205080"
+        android:text="start" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true" />
+
+    <com.whx.ktapplication.widget.Star
+        android:id="@+id/starView"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        app:rate="4.5"
+        app:starColor="#fa952f"
+        app:starRadius="15dp" />
+
+    <com.whx.ktapplication.widget.RatingStarView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:starCount="5"
+        app:starEmpty="@drawable/rating_star_empty"
+        app:starFull="@drawable/rating_star_full"
+        app:starMargin="3dp"
+        app:starRate="4.5"
+        app:starSize="20dp" />
+
+    <TextView
+        android:id="@+id/evaluateStarTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/evaluateStarPositionTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:textColor="#666666"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/evaluateCommentTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text=""
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/evaluateCommentPercentTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/toSpannable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="spannable" />
 </LinearLayout>

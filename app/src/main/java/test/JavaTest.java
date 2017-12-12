@@ -19,19 +19,20 @@ public class JavaTest {
     }
 
     public void method() {
-        println(TestKt.topConstValue);
-        println(TestKt.getTopValue());
 
-        println(Test.compObjConstValue);
-        println(Test.Companion.getCompObjValue());
-
-        println(Test.obj.objConstValue);
-        println(Test.obj.INSTANCE.getObjValue());
-
-        MyApplication.instance();
 
     }
     private void println(Object o) {
         System.out.println(o);
+    }
+
+    public static void main(String[] args) {
+        float fs = 1.3f;
+        float fm = 1.5f;
+        float fb = 1.8f;
+
+        System.out.println((int)fs);
+        System.out.println((int)fm);
+        System.out.println((int)fb);
     }
 }

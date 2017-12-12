@@ -21,11 +21,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TestActivity">
+        <activity android:name=".TestActivity"
+            android:screenOrientation="portrait">
 
         </activity>
 
         <activity android:name=".WebActivity">
+
+        </activity>
+        <activity android:name=".SpannableStringActivity">
 
         </activity>
     </application>

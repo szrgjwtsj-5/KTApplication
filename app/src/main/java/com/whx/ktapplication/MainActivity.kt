@@ -1,6 +1,7 @@
 package com.whx.ktapplication
 
 import android.content.Intent
+import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
@@ -11,6 +12,7 @@ import org.jetbrains.anko.async
 import org.jetbrains.anko.uiThread
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.startActivity
+import java.util.ArrayList
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,10 +24,24 @@ class MainActivity : AppCompatActivity() {
 
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        toTest.setOnClickListener { v ->
-            startActivity<TestActivity>()
-            /*val intent = Intent(MainActivity@this, javaClass<TestActivity>())
-            startActivity(intent)*/ }
+        val intent = Intent(this, TestActivity::class.java)
+
+        val size = 504
+        val sb = StringBuilder(size)
+        val strList = ArrayList<String>()
+
+        for (i in 0..size) {
+            sb.append("a")
+        }
+        for (i in 0..511) {
+            strList.add(sb.toString())
+        }
+
+        toTest.setOnClickListener {
+            //intent.putExtra("test_intent_size", strList)
+
+            startActivity(intent.apply { putExtra("hhh", Pair(1, 2)) })
+        }
 
 //        val url = "http://openweathermap.org/city/1816670"
 
