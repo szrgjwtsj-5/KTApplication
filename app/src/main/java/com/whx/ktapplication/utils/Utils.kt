@@ -2,6 +2,7 @@ package com.whx.ktapplication.utils
 
 import android.content.Context
 import android.text.TextUtils
+import android.util.TypedValue
 import android.widget.Toast
 import com.whx.ktapplication.MyApplication
 import java.math.BigDecimal
@@ -64,6 +65,11 @@ fun dp2px(context: Context, dimen: Float) : Float {
     return dimen * scale + 0.5f
 }
 
+fun sp2px(context: Context, spValue: Float): Float {
+
+    return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, spValue, context.resources.displayMetrics)
+
+}
 /**
  * 保留n位小数
  */

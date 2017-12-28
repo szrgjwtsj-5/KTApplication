@@ -43,6 +43,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent.apply { putExtra("hhh", Pair(1, 2)) })
         }
 
+        toBar.setOnClickListener {
+            startActivity(Intent(this, BarChartActivity::class.java))
+        }
 //        val url = "http://openweathermap.org/city/1816670"
 
         loadData()

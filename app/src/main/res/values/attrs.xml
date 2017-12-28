@@ -13,4 +13,23 @@
         <attr name="starEmpty" format="reference"/>
         <attr name="starFull" format="reference"/>
     </declare-styleable>
+    <declare-styleable name="MyChartView">
+        <attr name="leftColor" format="color"></attr>
+        <attr name="leftColorBottom" format="color"></attr>
+        <attr name="selectLeftColor" format="color"></attr>
+        <attr name="rightColor" format="color"></attr>
+        <attr name="rightColorBottom" format="color"></attr>
+        <attr name="selectRightColor" format="color"></attr>
+        <attr name="xyColor" format="color"></attr>
+    </declare-styleable>
+    <declare-styleable name="SelectLine">
+        <attr name="desMarginWithLine" format="dimension" />
+        <attr name="textLeftPadding" format="dimension" />
+        <attr name="textRightPadding" format="dimension" />
+        <attr name="innerR" format="dimension" />
+        <attr name="outerR" format="dimension" />
+        <attr name="selectLineMargin" format="dimension" />
+        <attr name="subTextPadding" format="dimension" />
+        <attr name="bottomMargin" format="dimension" />
+    </declare-styleable>
 </resources>

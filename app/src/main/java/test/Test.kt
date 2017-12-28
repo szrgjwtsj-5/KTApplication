@@ -38,22 +38,15 @@ class Test {
 }
 fun main(args: Array<String>) {
 
-    var test = Test()
+    val nums = arrayListOf(1, 2, 3, 4, 5, 6)
 
-    for (i in 0..9) {
-        object : Thread() {
-            override fun run() {
-                super.run()
-
-                test.add()
-                print(name + " add " + test.num + "       ")
-
-                test.sub()
-                println(name + " sub " + test.num)
-
-
-                //sleep(1000)
+    run loop@ {
+        nums.forEach {
+            println(it)
+            if (it == 3) {
+                return@loop
             }
-        }.start()
+        }
     }
+
 }

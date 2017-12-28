@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.whx.ktapplication.widget.BarChartView
+        android:id="@+id/dash_chart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.whx.ktapplication.widget.BarChartSelectLine
+        android:id="@+id/dash_select"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</FrameLayout>

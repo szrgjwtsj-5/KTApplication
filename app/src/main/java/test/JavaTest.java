@@ -5,6 +5,10 @@ import com.whx.ktapplication.data.ListKt;
 
 import org.jetbrains.annotations.Nullable;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 
 /**
@@ -27,12 +31,10 @@ public class JavaTest {
     }
 
     public static void main(String[] args) {
-        float fs = 1.3f;
-        float fm = 1.5f;
-        float fb = 1.8f;
+        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5);
 
-        System.out.println((int)fs);
-        System.out.println((int)fm);
-        System.out.println((int)fb);
+        for (int num : list) {
+
+        }
     }
 }
