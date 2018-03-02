@@ -1,13 +1,7 @@
 package test
 
-import com.whx.ktapplication.data.A
-import com.whx.ktapplication.utils.full2Half
-import com.whx.ktapplication.utils.half2Full
-import java.math.BigDecimal
-import java.math.RoundingMode
-import java.text.DecimalFormat
-import java.text.NumberFormat
-import java.util.*
+import android.content.Context
+import com.whx.ktapplication.utils.toast
 
 /**
  * Created by whx on 2017/7/31.
@@ -49,4 +43,8 @@ fun main(args: Array<String>) {
         }
     }
 
+}
+
+fun blalba(context: Context) {
+    context.toast("fuck")
 }

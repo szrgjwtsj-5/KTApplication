@@ -177,14 +177,7 @@ fun testOrder() {
     println(list1.sortedDescending())
 }
 
-open class A {
-    fun hh(){
-
-    }
-
-}
-
 fun main(args: Array<String>) {
 
-
+    testOrder()
 }

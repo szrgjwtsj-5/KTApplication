@@ -12,31 +12,10 @@ import kotlinx.android.synthetic.main.layout_test_barchart.*
  */
 class BarChartActivity : AppCompatActivity() {
 
-    private var data: MutableList<BarChartBean> = mutableListOf()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.layout_test_barchart)
-
-        createData()
-
-    }
-
-    private fun createData() {
-
-        confirm.setOnClickListener {
-            val num = barNum.text.toString().toInt()
-            data.clear()
-            for (i in 0 until num) {
-                val bean = BarChartBean("全部门店", "w", mutableListOf())
-                for (j in 0..1) {
-                    bean.revenue.add(BarChartItemBean("2017/11", (Math.random() * 3000), "12.9%"))
-                }
-                data.add(bean)
-            }
-            barChart.setData(data)
-        }
 
     }
 

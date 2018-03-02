@@ -20,3 +20,10 @@ fun Context.toast(message: CharSequence, duration: Int = Toast.LENGTH_SHORT) {
 
 val View.ctx: Context
     get() = context
+
+
+fun main(args: Array<String>) {
+//    printFoo(C())
+
+    println("fuck")
+}

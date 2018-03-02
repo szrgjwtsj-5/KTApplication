@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<com.whx.ktapplication.widget.MyScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@android:color/white"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -8,20 +9,38 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <com.whx.ktapplication.widget.BarChartLayout
-            android:id="@+id/barChart"
-            android:layout_width="match_parent"
-            android:layout_height="400dp" />
-        <EditText
-            android:id="@+id/barNum"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <Button
-            android:id="@+id/confirm"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="确定"/>
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+        </View>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#666666"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+        </View>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#666666"/>
+        <com.whx.ktapplication.widget.TestView
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#666666"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+        </View>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#666666"/>
     </LinearLayout>
 
-</ScrollView>
+</com.whx.ktapplication.widget.MyScrollView>
